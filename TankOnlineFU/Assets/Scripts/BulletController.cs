@@ -1,8 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Entities;
-using Enumerations;
+using Entity;
 using UnityEngine;
 
 public class BulletController : MonoBehaviour

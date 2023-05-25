@@ -1,7 +1,6 @@
 using UnityEngine;
-using Enumerations;
 
-namespace Entities
+namespace Entity
 {
     public class Bullet
     {
