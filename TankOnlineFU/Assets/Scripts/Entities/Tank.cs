@@ -1,7 +1,8 @@
 using UnityEditor;
 using UnityEngine;
+using Enumerations;
 
-namespace Entity
+namespace Entities
 {
 
 

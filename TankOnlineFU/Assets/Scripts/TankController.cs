@@ -1,5 +1,6 @@
 using DefaultNamespace;
-using Entity;
+using Entities;
+using Enumerations;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
