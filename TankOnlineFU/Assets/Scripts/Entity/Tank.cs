@@ -7,6 +7,7 @@ namespace Entity
 
     public class Tank
     {
+        public Bullet Bullet { get; set; }
         public Direction Direction { get; set; }
         public string Name { get; set; }
         public int Point { get; set; }
