@@ -1,4 +1,4 @@
-namespace Entity
+namespace Enumerations
 {
     public enum Direction
     {

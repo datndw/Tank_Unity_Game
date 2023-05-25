@@ -1,5 +1,6 @@
 using System;
-using Entity;
+using Entities;
+using Enumerations;
 using UnityEngine;
 
 namespace DefaultNamespace
