@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class SelectorController : MonoBehaviour
 {
+    private GameManager m_GameManager;
     private Vector3 _singlePlayerPos;
     private Vector3 _multiplePlayerPos;
     private Vector3 _createLevelPos;
@@ -23,6 +24,7 @@ public class SelectorController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        m_GameManager = FindObjectOfType<GameManager>();
         _singlePlayerPos.x = _multiplePlayerPos.x = _createLevelPos.x = _constructionPos.x -= 400;
         GameObject.Find("img_selector").transform.position = _currentPos = _singlePlayerPos;
     }
@@ -43,7 +45,36 @@ public class SelectorController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Return))
         {
+            //m_GameManager.Play();
+            Enter(_currentPos);
+        }
+    }
 
+    private void Enter(Vector3 currentPos)
+    {
+        switch(currentPos)
+        {
+            case var pos when pos == _singlePlayerPos:
+                {
+                    m_GameManager.Play();
+                    break;
+                }
+            case var pos when pos == _multiplePlayerPos:
+                {
+                    GameSettings.isMultiplePlayer = true;
+                    m_GameManager.Play();
+                    break;
+                }
+            case var pos when pos == _createLevelPos:
+                {
+                    m_GameManager.CreateLevel();
+                    break;
+                }
+            case var pos when pos == _constructionPos:
+                {
+                    m_GameManager.Construction();
+                    break;
+                }
         }
     }
 
