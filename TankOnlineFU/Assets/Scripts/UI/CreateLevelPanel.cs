@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PausePanel : MonoBehaviour
+public class CreateLevelPanel : MonoBehaviour
 {
     private GameManager m_GameManager;
     // Start is called before the first frame update
@@ -15,10 +15,5 @@ public class PausePanel : MonoBehaviour
     void Update()
     {
         
-    }
-
-    public void BtnContinue_Pressed()
-    {
-        m_GameManager.Play();
     }
 }

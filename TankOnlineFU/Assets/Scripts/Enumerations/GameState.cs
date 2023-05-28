@@ -5,6 +5,8 @@
         GamePlay,
         Pause,
         GameOver,
-        Home
+        Home,
+        Construction,
+        CreateLevel
     }
 }
