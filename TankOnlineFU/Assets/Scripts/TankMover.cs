@@ -13,7 +13,7 @@ public class TankMover : MonoBehaviour
 
     void Start()
     {
-        speed = 1;
+        speed = 8;
     }
 
     // Update is called once per frame
