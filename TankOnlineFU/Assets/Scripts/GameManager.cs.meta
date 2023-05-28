@@ -3,7 +3,14 @@ guid: 0972aee881ee24c459fb78622eac46b1
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - m_HomePanel: {instanceID: 0}
+  - m_GameplayPanel: {instanceID: 0}
+  - m_PausePanel: {instanceID: 0}
+  - m_GameoverPanel: {instanceID: 0}
+  - m_ConstructionPanel: {instanceID: 0}
+  - m_CreateLevelPanel: {instanceID: 0}
+  - m_LevelManager: {fileID: 11400000, guid: 56fb9680d5a2c4571b6ae400ccb94b80, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
