@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Enumerations;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SelectorController : MonoBehaviour
 {
@@ -57,12 +58,14 @@ public class SelectorController : MonoBehaviour
             case var pos when pos == _singlePlayerPos:
                 {
                     m_GameManager.Play();
+                    SceneManager.LoadScene("Level_1");
                     break;
                 }
             case var pos when pos == _multiplePlayerPos:
                 {
                     GameSettings.isMultiplePlayer = true;
                     m_GameManager.Play();
+                    SceneManager.LoadScene("Level_1");
                     break;
                 }
             case var pos when pos == _createLevelPos:
