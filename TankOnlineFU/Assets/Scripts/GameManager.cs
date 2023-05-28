@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameoverPanel m_GameoverPanel;
     [SerializeField] private ConstructionPanel m_ConstructionPanel;
     [SerializeField] private CreateLevelPanel m_CreateLevelPanel;
+    [SerializeField] private LevelManager m_LevelManager;
+
     [HideInInspector] private GameState m_GameState;
     [HideInInspector] bool m_Win;
 
@@ -115,8 +117,17 @@ public class GameManager : MonoBehaviour
     }
     public void NextLevel()
     {
-
+        string nextLevel = m_LevelManager.GetNextLevel();
+        if (!string.IsNullOrEmpty(nextLevel))
+        {
+            SceneManager.LoadScene(nextLevel);
+        }
+        else
+        {
+            Debug.LogWarning("No more level");
+        }
     }
+
     public void Restart()
     {
 
