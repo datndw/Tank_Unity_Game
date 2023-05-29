@@ -7,13 +7,20 @@ using UnityEngine;
 
 public class BulletController : MonoBehaviour
 {
+    private AudioManager m_AudioManager;
     public Bullet Bullet { get; set; }
 
     public int MaxRange { get; set; }
 
     // Start is called before the first frame update
+    private void Awake()
+    {
+        m_AudioManager = GameObject.FindObjectOfType<AudioManager>();
+    }
+
     private void Start()
     {
+        m_AudioManager.PlaySFX(m_AudioManager.bulletHitMetal);
     }
 
     // Update is called once per frame
