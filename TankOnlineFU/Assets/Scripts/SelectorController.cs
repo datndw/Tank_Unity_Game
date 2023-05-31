@@ -68,7 +68,7 @@ public class SelectorController : MonoBehaviour
                 {
                     GameSettings.isMultiplePlayer = true;
                     m_GameManager.Play();
-                    //SceneManager.LoadScene("Level_1");
+                    SceneManager.LoadScene("Level_1");
                     break;
                 }
             case var pos when pos == _createLevelPos:
