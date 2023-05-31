@@ -14,7 +14,7 @@ public class PausePanel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void BtnContinue_Pressed()

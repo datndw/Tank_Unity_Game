@@ -7,13 +7,15 @@ using UnityEngine;
 
 public class BulletController : MonoBehaviour
 {
+    private AudioManager m_AudioManager;
     public Bullet Bullet { get; set; }
 
     public int MaxRange { get; set; }
 
     // Start is called before the first frame update
-    private void Start()
+    private void Awake()
     {
+        m_AudioManager = GameObject.FindObjectOfType<AudioManager>();
     }
 
     // Update is called once per frame
@@ -58,6 +60,26 @@ public class BulletController : MonoBehaviour
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Metal")
+        {
+            m_AudioManager.PlaySFX(m_AudioManager.bulletHitMetal);
+        }
+        else if (collision.gameObject.tag == "Grass")
+        {
+            m_AudioManager.PlaySFX(m_AudioManager.bulletHitGrass);
+        }
+        else if (collision.gameObject.tag == "Water")
+        {
+            m_AudioManager.PlaySFX(m_AudioManager.bulletHitWater);
+        }
+        else
+        {
+            m_AudioManager.PlaySFX(m_AudioManager.bulletHitBrick);
         }
     }
 }

@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class SelectorController : MonoBehaviour
 {
     private GameManager m_GameManager;
+    private AudioManager m_AudioManager;
     private Vector3 _singlePlayerPos;
     private Vector3 _multiplePlayerPos;
     private Vector3 _createLevelPos;
@@ -16,6 +17,7 @@ public class SelectorController : MonoBehaviour
 
     private void Awake()
     {
+        m_AudioManager = GameObject.FindObjectOfType<AudioManager>();
         _singlePlayerPos = GameObject.Find("txt_single_player").transform.position;
         _multiplePlayerPos = GameObject.Find("txt_multiple_players").transform.position;
         _createLevelPos = GameObject.Find("txt_create_level").transform.position;
@@ -35,12 +37,13 @@ public class SelectorController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
         {
-
+            m_AudioManager.PlaySFX(m_AudioManager.bubbleSound);
             NextOption(_currentPos);
 
         }
         else if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
         {
+            m_AudioManager.PlaySFX(m_AudioManager.bubbleSound);
             PreviousOption(_currentPos);
         }
 
@@ -53,7 +56,7 @@ public class SelectorController : MonoBehaviour
 
     private void Enter(Vector3 currentPos)
     {
-        switch(currentPos)
+        switch (currentPos)
         {
             case var pos when pos == _singlePlayerPos:
                 {
@@ -133,7 +136,6 @@ public class SelectorController : MonoBehaviour
                     GameObject.Find("img_selector").transform.position = _currentPos = _singlePlayerPos;
                     break;
                 }
-
         }
     }
 }
