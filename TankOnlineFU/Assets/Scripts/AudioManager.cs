@@ -12,6 +12,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip bulletHitMetal;
     public AudioClip bulletHitGrass;
     public AudioClip bulletHitWater;
+    public AudioClip bubbleSound;
+    
     public static AudioManager Instance
     {
         get

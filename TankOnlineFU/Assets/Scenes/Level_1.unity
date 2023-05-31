@@ -743,6 +743,7 @@ MonoBehaviour:
   bulletHitMetal: {fileID: 8300000, guid: 160a78052b89c3f4ab0463728b8b1389, type: 3}
   bulletHitGrass: {fileID: 8300000, guid: e6099b6073bab204b94b7313347f2bde, type: 3}
   bulletHitWater: {fileID: 8300000, guid: 160a78052b89c3f4ab0463728b8b1389, type: 3}
+  bubbleSound: {fileID: 8300000, guid: 5a90cd9fcad849d43b1fd30391511dac, type: 3}
 --- !u!4 &487599197
 Transform:
   m_ObjectHideFlags: 0

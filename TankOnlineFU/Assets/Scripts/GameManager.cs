@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager m_Instance;
+    public static AudioManager m_AudioInstance;
     public static GameManager Instance
     {
         get
@@ -34,6 +35,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        m_AudioInstance=GameObject.FindObjectOfType<AudioManager>();
         if (m_Instance == null)
         {
             m_Instance = this;
@@ -114,6 +116,7 @@ public class GameManager : MonoBehaviour
     public void Gameover(bool win)
     {
         m_Win = win;
+        m_AudioInstance.PlaySFX(m_AudioInstance.loseGame);
         SetState(GameState.GameOver);
         //m_GameoverPanel.DisplayResult(m_Win);
     }
