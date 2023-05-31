@@ -18,11 +18,6 @@ public class BulletController : MonoBehaviour
         m_AudioManager = GameObject.FindObjectOfType<AudioManager>();
     }
 
-    private void Start()
-    {
-        m_AudioManager.PlaySFX(m_AudioManager.bulletHitMetal);
-    }
-
     // Update is called once per frame
     private void Update()
     {
@@ -65,6 +60,26 @@ public class BulletController : MonoBehaviour
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Metal")
+        {
+            m_AudioManager.PlaySFX(m_AudioManager.bulletHitMetal);
+        }
+        else if (collision.gameObject.tag == "Grass")
+        {
+            m_AudioManager.PlaySFX(m_AudioManager.bulletHitGrass);
+        }
+        else if (collision.gameObject.tag == "Water")
+        {
+            m_AudioManager.PlaySFX(m_AudioManager.bulletHitWater);
+        }
+        else
+        {
+            m_AudioManager.PlaySFX(m_AudioManager.bulletHitBrick);
         }
     }
 }
