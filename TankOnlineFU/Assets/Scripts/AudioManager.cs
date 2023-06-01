@@ -43,7 +43,7 @@ public class AudioManager : MonoBehaviour
     {
         musicSource.clip = startGame;
         musicSource.Play();
-        musicSource.loop = false;
+        musicSource.loop = true;
     }
 
     public void PlaySFX(AudioClip clip)
