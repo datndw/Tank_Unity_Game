@@ -13,7 +13,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip bulletHitGrass;
     public AudioClip bulletHitWater;
     public AudioClip bubbleSound;
-    
+
     public static AudioManager Instance
     {
         get
@@ -51,8 +51,15 @@ public class AudioManager : MonoBehaviour
         sfxSource.PlayOneShot(clip);
     }
 
-    public void SetVolume(float value)
+    public void SetVolume(string source, float value)
     {
-        musicSource.volume = value;
+        if (source == "Music")
+        {
+            musicSource.volume = value;
+        }
+        else
+        {
+            sfxSource.volume = value;
+        }
     }
 }
