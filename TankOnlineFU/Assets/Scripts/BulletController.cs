@@ -80,6 +80,7 @@ public class BulletController : MonoBehaviour
         else
         {
             m_AudioManager.PlaySFX(m_AudioManager.bulletHitBrick);
+            Destroy(collision.gameObject);
         }
     }
 }
