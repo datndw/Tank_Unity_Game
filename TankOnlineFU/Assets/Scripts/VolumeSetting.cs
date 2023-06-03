@@ -13,9 +13,20 @@ public class VolumeSetting : MonoBehaviour
     {
         m_AudioManager = GameObject.FindObjectOfType<AudioManager>();
     }
+    private void Start()
+    {
+        musicSlider.value = sfxSlider.value = 5;
+        m_AudioManager.SetVolume("Music", 5);
+        m_AudioManager.SetVolume("Sfx", 5);
+    }
     public void SetMusicVolume()
     {
         float volume = musicSlider.value;
-        m_AudioManager.SetVolume(volume);
+        m_AudioManager.SetVolume("Music", volume);
+    }
+    public void SetSfxVolume()
+    {
+        float volume = sfxSlider.value;
+        m_AudioManager.SetVolume("Sfx", volume);
     }
 }
