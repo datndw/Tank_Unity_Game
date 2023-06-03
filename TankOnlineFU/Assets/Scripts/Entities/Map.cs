@@ -3,21 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Enumerations;
 
 namespace Entities
 {
     public class Map
     {
-        public int[] Size = new int[] { 64, 64 };
-
-        public int[][] Location = new int[][] {};
+        public int Row { get; set; }
+        public int Column { get; set; }
+        public List<Cell> Cells { get; set; }
+        public Dictionary<MapEntity, List<Position>> Data = new();
         
         public Map() { }
 
-        public Map(int[] size, int[][] location)
+        public Map(int row, int column, List<Cell> cells, Dictionary<MapEntity, List<Position>> data)
         {
-            Size = size;
-            Location = location;
+            Row = row;
+            Column = column;
+            Cells = cells;
+            Data = data;
         }
     }
 }

@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    const string START_LEVEL = "Level_1";
     public static GameManager m_Instance;
     public static AudioManager m_AudioInstance;
     public static GameManager Instance
@@ -93,6 +94,10 @@ public class GameManager : MonoBehaviour
     public void Play()
     {
         SetState(GameState.GamePlay);
+        DontDestroyOnLoad(gameObject);
+        SceneManager.LoadScene(START_LEVEL);
+        MapLoader.LoadMap(START_LEVEL);
+
     }
 
     public void Construction()
@@ -108,7 +113,7 @@ public class GameManager : MonoBehaviour
 
     private void CreateNewLevel()
     {
-        var map = new Map() { Size = new int[] { 16, 16 } };
+        var map = new Map();
     }
 
     public void Pause()
