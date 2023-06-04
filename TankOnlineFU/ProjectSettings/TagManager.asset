@@ -15,12 +15,12 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Background
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Platform
+  - Tank
+  - Bush
   - 
   - 
   - 
@@ -48,9 +48,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 353307255
+    locked: 0
+  - name: Water
+    uniqueID: 3145435853
+    locked: 0
   - name: Platform
     uniqueID: 740371547
     locked: 0
-  - name: Background
-    uniqueID: 353307255
+  - name: Tank
+    uniqueID: 4212933817
+    locked: 0
+  - name: Bush
+    uniqueID: 1407607969
     locked: 0

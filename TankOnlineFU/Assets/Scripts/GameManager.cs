@@ -93,7 +93,6 @@ public class GameManager : MonoBehaviour
 
     public void Play()
     {
-        //DontDestroyOnLoad(gameObject);
         SceneManager.LoadScene(START_LEVEL);
         MapLoader.LoadMap(START_LEVEL);
         SetState(GameState.GamePlay);
