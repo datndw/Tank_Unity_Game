@@ -3,8 +3,168 @@
     "Column": 80,
     "Bricks": [
         {
+            "Row": 2,
+            "Column": 3
+        },
+        {
+            "Row": 2,
+            "Column": 4
+        },
+        {
+            "Row": 2,
+            "Column": 5
+        },
+        {
+            "Row": 3,
+            "Column": 3
+        },
+        {
             "Row": 3,
             "Column": 4
+        },
+        {
+            "Row": 3,
+            "Column": 5
+        },
+        {
+            "Row": 4,
+            "Column": 3
+        },
+        {
+            "Row": 4,
+            "Column": 4
+        },
+        {
+            "Row": 5,
+            "Column": 3
+        },
+        {
+            "Row": 5,
+            "Column": 4
+        },
+        {
+            "Row": 6,
+            "Column": 3
+        },
+        {
+            "Row": 6,
+            "Column": 4
+        },
+        {
+            "Row": 6,
+            "Column": 5
+        },
+        {
+            "Row": 7,
+            "Column": 3
+        },
+        {
+            "Row": 7,
+            "Column": 4
+        },
+        {
+            "Row": 7,
+            "Column": 5
+        },
+        {
+            "Row": 8,
+            "Column": 3
+        },
+        {
+            "Row": 8,
+            "Column": 4
+        },
+        {
+            "Row": 8,
+            "Column": 5
+        },
+        {
+            "Row": 9,
+            "Column": 3
+        },
+        {
+            "Row": 9,
+            "Column": 4
+        },
+        {
+            "Row": 9,
+            "Column": 5
+        },
+        {
+            "Row": 10,
+            "Column": 3
+        },
+        {
+            "Row": 10,
+            "Column": 4
+        },
+        {
+            "Row": 10,
+            "Column": 5
+        },
+        {
+            "Row": 2,
+            "Column": 9
+        },
+        {
+            "Row": 2,
+            "Column": 10
+        },
+        {
+            "Row": 2,
+            "Column": 11
+        },
+        {
+            "Row": 3,
+            "Column": 9
+        },
+        {
+            "Row": 3,
+            "Column": 10
+        },
+        {
+            "Row": 3,
+            "Column": 11
+        },
+        {
+            "Row": 6,
+            "Column": 9
+        },
+        {
+            "Row": 6,
+            "Column": 10
+        },
+        {
+            "Row": 6,
+            "Column": 11
+        },
+        {
+            "Row": 7,
+            "Column": 9
+        },
+        {
+            "Row": 7,
+            "Column": 10
+        },
+        {
+            "Row": 7,
+            "Column": 11
+        },
+        {
+            "Row": 8,
+            "Column": 9
+        },
+        {
+            "Row": 8,
+            "Column": 10
+        },
+        {
+            "Row": 8,
+            "Column": 11
+        },
+        {
+            "Row": 9,
+            "Column": 9
         },
         {
             "Row": 9,
@@ -13,6 +173,890 @@
         {
             "Row": 9,
             "Column": 11
+        },
+        {
+            "Row": 10,
+            "Column": 9
+        },
+        {
+            "Row": 10,
+            "Column": 10
+        },
+        {
+            "Row": 10,
+            "Column": 11
+        },
+        {
+            "Row": 3,
+            "Column": 15
+        },
+        {
+            "Row": 3,
+            "Column": 16
+        },
+        {
+            "Row": 3,
+            "Column": 17
+        },
+        {
+            "Row": 6,
+            "Column": 15
+        },
+        {
+            "Row": 6,
+            "Column": 16
+        },
+        {
+            "Row": 7,
+            "Column": 15
+        },
+        {
+            "Row": 7,
+            "Column": 16
+        },
+        {
+            "Row": 7,
+            "Column": 17
+        },
+        {
+            "Row": 8,
+            "Column": 15
+        },
+        {
+            "Row": 8,
+            "Column": 16
+        },
+        {
+            "Row": 8,
+            "Column": 17
+        },
+        {
+            "Row": 3,
+            "Column": 20
+        },
+        {
+            "Row": 3,
+            "Column": 21
+        },
+        {
+            "Row": 3,
+            "Column": 22
+        },
+        {
+            "Row": 6,
+            "Column": 20
+        },
+        {
+            "Row": 6,
+            "Column": 21
+        },
+        {
+            "Row": 7,
+            "Column": 20
+        },
+        {
+            "Row": 7,
+            "Column": 21
+        },
+        {
+            "Row": 7,
+            "Column": 22
+        },
+        {
+            "Row": 8,
+            "Column": 20
+        },
+        {
+            "Row": 8,
+            "Column": 21
+        },
+        {
+            "Row": 8,
+            "Column": 22
+        },
+        {
+            "Row": 2,
+            "Column": 26
+        },
+        {
+            "Row": 2,
+            "Column": 27
+        },
+        {
+            "Row": 3,
+            "Column": 26
+        },
+        {
+            "Row": 3,
+            "Column": 27
+        },
+        {
+            "Row": 3,
+            "Column": 28
+        },
+        {
+            "Row": 4,
+            "Column": 26
+        },
+        {
+            "Row": 4,
+            "Column": 27
+        },
+        {
+            "Row": 4,
+            "Column": 28
+        },
+        {
+            "Row": 5,
+            "Column": 26
+        },
+        {
+            "Row": 5,
+            "Column": 27
+        },
+        {
+            "Row": 5,
+            "Column": 28
+        },
+        {
+            "Row": 6,
+            "Column": 26
+        },
+        {
+            "Row": 6,
+            "Column": 27
+        },
+        {
+            "Row": 6,
+            "Column": 28
+        },
+        {
+            "Row": 7,
+            "Column": 26
+        },
+        {
+            "Row": 7,
+            "Column": 27
+        },
+        {
+            "Row": 7,
+            "Column": 28
+        },
+        {
+            "Row": 8,
+            "Column": 26
+        },
+        {
+            "Row": 8,
+            "Column": 27
+        },
+        {
+            "Row": 8,
+            "Column": 28
+        },
+        {
+            "Row": 9,
+            "Column": 26
+        },
+        {
+            "Row": 9,
+            "Column": 27
+        },
+        {
+            "Row": 9,
+            "Column": 28
+        },
+        {
+            "Row": 10,
+            "Column": 26
+        },
+        {
+            "Row": 10,
+            "Column": 27
+        },
+        {
+            "Row": 10,
+            "Column": 28
+        },
+        {
+            "Row": 3,
+            "Column": 32
+        },
+        {
+            "Row": 3,
+            "Column": 33
+        },
+        {
+            "Row": 3,
+            "Column": 34
+        },
+        {
+            "Row": 4,
+            "Column": 32
+        },
+        {
+            "Row": 4,
+            "Column": 34
+        },
+        {
+            "Row": 5,
+            "Column": 32
+        },
+        {
+            "Row": 5,
+            "Column": 33
+        },
+        {
+            "Row": 5,
+            "Column": 34
+        },
+        {
+            "Row": 6,
+            "Column": 32
+        },
+        {
+            "Row": 6,
+            "Column": 33
+        },
+        {
+            "Row": 6,
+            "Column": 34
+        },
+        {
+            "Row": 7,
+            "Column": 32
+        },
+        {
+            "Row": 7,
+            "Column": 33
+        },
+        {
+            "Row": 7,
+            "Column": 34
+        },
+        {
+            "Row": 8,
+            "Column": 32
+        },
+        {
+            "Row": 8,
+            "Column": 33
+        },
+        {
+            "Row": 8,
+            "Column": 34
+        },
+        {
+            "Row": 9,
+            "Column": 32
+        },
+        {
+            "Row": 9,
+            "Column": 33
+        },
+        {
+            "Row": 9,
+            "Column": 36
+        },
+        {
+            "Row": 10,
+            "Column": 32
+        },
+        {
+            "Row": 10,
+            "Column": 33
+        },
+        {
+            "Row": 10,
+            "Column": 35
+        },
+        {
+            "Row": 3,
+            "Column": 37
+        },
+        {
+            "Row": 3,
+            "Column": 38
+        },
+        {
+            "Row": 3,
+            "Column": 39
+        },
+        {
+            "Row": 4,
+            "Column": 38
+        },
+        {
+            "Row": 4,
+            "Column": 39
+        },
+        {
+            "Row": 5,
+            "Column": 37
+        },
+        {
+            "Row": 5,
+            "Column": 39
+        },
+        {
+            "Row": 5,
+            "Column": 40
+        },
+        {
+            "Row": 6,
+            "Column": 37
+        },
+        {
+            "Row": 6,
+            "Column": 38
+        },
+        {
+            "Row": 6,
+            "Column": 39
+        },
+        {
+            "Row": 7,
+            "Column": 38
+        },
+        {
+            "Row": 8,
+            "Column": 39
+        },
+        {
+            "Row": 9,
+            "Column": 38
+        },
+        {
+            "Row": 10,
+            "Column": 39
+        },
+        {
+            "Row": 4,
+            "Column": 3
+        },
+        {
+            "Row": 4,
+            "Column": 4
+        },
+        {
+            "Row": 4,
+            "Column": 5
+        },
+        {
+            "Row": 6,
+            "Column": 3
+        },
+        {
+            "Row": 6,
+            "Column": 4
+        },
+        {
+            "Row": 6,
+            "Column": 5
+        },
+        {
+            "Row": 8,
+            "Column": 3
+        },
+        {
+            "Row": 8,
+            "Column": 4
+        },
+        {
+            "Row": 10,
+            "Column": 3
+        },
+        {
+            "Row": 10,
+            "Column": 4
+        },
+        {
+            "Row": 12,
+            "Column": 3
+        },
+        {
+            "Row": 12,
+            "Column": 4
+        },
+        {
+            "Row": 12,
+            "Column": 5
+        },
+        {
+            "Row": 14,
+            "Column": 3
+        },
+        {
+            "Row": 14,
+            "Column": 4
+        },
+        {
+            "Row": 14,
+            "Column": 5
+        },
+        {
+            "Row": 16,
+            "Column": 3
+        },
+        {
+            "Row": 16,
+            "Column": 4
+        },
+        {
+            "Row": 16,
+            "Column": 5
+        },
+        {
+            "Row": 18,
+            "Column": 3
+        },
+        {
+            "Row": 18,
+            "Column": 4
+        },
+        {
+            "Row": 18,
+            "Column": 5
+        },
+        {
+            "Row": 20,
+            "Column": 3
+        },
+        {
+            "Row": 20,
+            "Column": 4
+        },
+        {
+            "Row": 20,
+            "Column": 5
+        },
+        {
+            "Row": 4,
+            "Column": 9
+        },
+        {
+            "Row": 4,
+            "Column": 10
+        },
+        {
+            "Row": 4,
+            "Column": 11
+        },
+        {
+            "Row": 6,
+            "Column": 9
+        },
+        {
+            "Row": 6,
+            "Column": 10
+        },
+        {
+            "Row": 6,
+            "Column": 11
+        },
+        {
+            "Row": 12,
+            "Column": 9
+        },
+        {
+            "Row": 12,
+            "Column": 10
+        },
+        {
+            "Row": 12,
+            "Column": 11
+        },
+        {
+            "Row": 14,
+            "Column": 9
+        },
+        {
+            "Row": 14,
+            "Column": 10
+        },
+        {
+            "Row": 14,
+            "Column": 11
+        },
+        {
+            "Row": 16,
+            "Column": 9
+        },
+        {
+            "Row": 16,
+            "Column": 10
+        },
+        {
+            "Row": 16,
+            "Column": 11
+        },
+        {
+            "Row": 18,
+            "Column": 9
+        },
+        {
+            "Row": 18,
+            "Column": 10
+        },
+        {
+            "Row": 18,
+            "Column": 11
+        },
+        {
+            "Row": 20,
+            "Column": 9
+        },
+        {
+            "Row": 20,
+            "Column": 10
+        },
+        {
+            "Row": 20,
+            "Column": 11
+        },
+        {
+            "Row": 6,
+            "Column": 15
+        },
+        {
+            "Row": 6,
+            "Column": 16
+        },
+        {
+            "Row": 6,
+            "Column": 17
+        },
+        {
+            "Row": 12,
+            "Column": 15
+        },
+        {
+            "Row": 12,
+            "Column": 16
+        },
+        {
+            "Row": 14,
+            "Column": 15
+        },
+        {
+            "Row": 14,
+            "Column": 16
+        },
+        {
+            "Row": 14,
+            "Column": 17
+        },
+        {
+            "Row": 18,
+            "Column": 15
+        },
+        {
+            "Row": 18,
+            "Column": 16
+        },
+        {
+            "Row": 18,
+            "Column": 17
+        },
+        {
+            "Row": 6,
+            "Column": 20
+        },
+        {
+            "Row": 6,
+            "Column": 21
+        },
+        {
+            "Row": 6,
+            "Column": 22
+        },
+        {
+            "Row": 12,
+            "Column": 20
+        },
+        {
+            "Row": 12,
+            "Column": 21
+        },
+        {
+            "Row": 14,
+            "Column": 20
+        },
+        {
+            "Row": 14,
+            "Column": 21
+        },
+        {
+            "Row": 14,
+            "Column": 22
+        },
+        {
+            "Row": 16,
+            "Column": 20
+        },
+        {
+            "Row": 16,
+            "Column": 21
+        },
+        {
+            "Row": 16,
+            "Column": 22
+        },
+        {
+            "Row": 4,
+            "Column": 26
+        },
+        {
+            "Row": 4,
+            "Column": 27
+        },
+        {
+            "Row": 6,
+            "Column": 26
+        },
+        {
+            "Row": 6,
+            "Column": 27
+        },
+        {
+            "Row": 6,
+            "Column": 28
+        },
+        {
+            "Row": 8,
+            "Column": 26
+        },
+        {
+            "Row": 8,
+            "Column": 27
+        },
+        {
+            "Row": 8,
+            "Column": 28
+        },
+        {
+            "Row": 10,
+            "Column": 26
+        },
+        {
+            "Row": 10,
+            "Column": 27
+        },
+        {
+            "Row": 10,
+            "Column": 28
+        },
+        {
+            "Row": 12,
+            "Column": 26
+        },
+        {
+            "Row": 12,
+            "Column": 27
+        },
+        {
+            "Row": 12,
+            "Column": 28
+        },
+        {
+            "Row": 14,
+            "Column": 26
+        },
+        {
+            "Row": 14,
+            "Column": 27
+        },
+        {
+            "Row": 14,
+            "Column": 28
+        },
+        {
+            "Row": 16,
+            "Column": 26
+        },
+        {
+            "Row": 16,
+            "Column": 27
+        },
+        {
+            "Row": 16,
+            "Column": 28
+        },
+        {
+            "Row": 18,
+            "Column": 26
+        },
+        {
+            "Row": 18,
+            "Column": 27
+        },
+        {
+            "Row": 18,
+            "Column": 28
+        },
+        {
+            "Row": 20,
+            "Column": 26
+        },
+        {
+            "Row": 20,
+            "Column": 27
+        },
+        {
+            "Row": 20,
+            "Column": 28
+        },
+        {
+            "Row": 6,
+            "Column": 32
+        },
+        {
+            "Row": 6,
+            "Column": 33
+        },
+        {
+            "Row": 6,
+            "Column": 34
+        },
+        {
+            "Row": 8,
+            "Column": 32
+        },
+        {
+            "Row": 8,
+            "Column": 34
+        },
+        {
+            "Row": 10,
+            "Column": 32
+        },
+        {
+            "Row": 10,
+            "Column": 33
+        },
+        {
+            "Row": 10,
+            "Column": 34
+        },
+        {
+            "Row": 12,
+            "Column": 32
+        },
+        {
+            "Row": 12,
+            "Column": 33
+        },
+        {
+            "Row": 12,
+            "Column": 34
+        },
+        {
+            "Row": 14,
+            "Column": 32
+        },
+        {
+            "Row": 14,
+            "Column": 33
+        },
+        {
+            "Row": 14,
+            "Column": 34
+        },
+        {
+            "Row": 16,
+            "Column": 32
+        },
+        {
+            "Row": 16,
+            "Column": 33
+        },
+        {
+            "Row": 16,
+            "Column": 34
+        },
+        {
+            "Row": 18,
+            "Column": 32
+        },
+        {
+            "Row": 18,
+            "Column": 33
+        },
+        {
+            "Row": 18,
+            "Column": 36
+        },
+        {
+            "Row": 20,
+            "Column": 32
+        },
+        {
+            "Row": 20,
+            "Column": 33
+        },
+        {
+            "Row": 20,
+            "Column": 35
+        },
+        {
+            "Row": 6,
+            "Column": 37
+        },
+        {
+            "Row": 6,
+            "Column": 38
+        },
+        {
+            "Row": 6,
+            "Column": 39
+        },
+        {
+            "Row": 8,
+            "Column": 38
+        },
+        {
+            "Row": 8,
+            "Column": 39
+        },
+        {
+            "Row": 10,
+            "Column": 37
+        },
+        {
+            "Row": 10,
+            "Column": 39
+        },
+        {
+            "Row": 10,
+            "Column": 40
+        },
+        {
+            "Row": 12,
+            "Column": 37
+        },
+        {
+            "Row": 12,
+            "Column": 38
+        },
+        {
+            "Row": 12,
+            "Column": 39
+        },
+        {
+            "Row": 14,
+            "Column": 38
+        },
+        {
+            "Row": 16,
+            "Column": 39
+        },
+        {
+            "Row": 18,
+            "Column": 38
+        },
+        {
+            "Row": 20,
+            "Column": 39
         }
     ],
     "Stones": [

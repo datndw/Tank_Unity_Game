@@ -68,6 +68,7 @@ public class BulletController : MonoBehaviour
         if (collision.gameObject.tag == "Metal")
         {
             m_AudioManager.PlaySFX(m_AudioManager.bulletHitMetal);
+            Destroy(gameObject);
         }
         else if (collision.gameObject.tag == "Grass")
         {
@@ -81,6 +82,7 @@ public class BulletController : MonoBehaviour
         {
             m_AudioManager.PlaySFX(m_AudioManager.bulletHitBrick);
             Destroy(collision.gameObject);
+            Destroy(gameObject);
         }
     }
 }
