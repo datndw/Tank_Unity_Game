@@ -1,19 +1,21 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Entities;
 using Enumerations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    const string START_LEVEL = "Level_1";
     public static GameManager m_Instance;
     public static AudioManager m_AudioInstance;
     public static GameManager Instance
     {
         get
         {
-            if(m_Instance == null)
+            if (m_Instance == null)
             {
                 m_Instance = FindObjectOfType<GameManager>();
             }
@@ -35,13 +37,13 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        m_AudioInstance=GameObject.FindObjectOfType<AudioManager>();
+        m_AudioInstance = GameObject.FindObjectOfType<AudioManager>();
         if (m_Instance == null)
         {
             m_Instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        else if( m_Instance != this)
+        else if (m_Instance != this)
         {
             Destroy(gameObject);
         }
@@ -84,13 +86,18 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public bool IsActive() {
+    public bool IsActive()
+    {
         return m_GameState == GameState.GamePlay;
     }
 
     public void Play()
     {
         SetState(GameState.GamePlay);
+        DontDestroyOnLoad(gameObject);
+        SceneManager.LoadScene(START_LEVEL);
+        MapLoader.LoadMap(START_LEVEL);
+
     }
 
     public void Construction()
@@ -101,6 +108,12 @@ public class GameManager : MonoBehaviour
     public void CreateLevel()
     {
         SetState(GameState.CreateLevel);
+        CreateNewLevel();
+    }
+
+    private void CreateNewLevel()
+    {
+        var map = new Map();
     }
 
     public void Pause()
