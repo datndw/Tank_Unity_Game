@@ -19,6 +19,11 @@ public class PausePanel : MonoBehaviour
 
     public void BtnContinue_Pressed()
     {
-        m_GameManager.Play();
+        m_GameManager.Continue();
+    }
+
+    public void BtnExit_Pressed()
+    {
+        m_GameManager.Start();
     }
 }
