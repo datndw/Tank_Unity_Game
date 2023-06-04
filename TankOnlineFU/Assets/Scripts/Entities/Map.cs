@@ -7,21 +7,17 @@ using Enumerations;
 
 namespace Entities
 {
+    [Serializable]
     public class Map
     {
-        public int Row { get; set; }
-        public int Column { get; set; }
-        public List<Cell> Cells { get; set; }
-        public Dictionary<MapEntity, List<Position>> Data = new();
-        
-        public Map() { }
-
-        public Map(int row, int column, List<Cell> cells, Dictionary<MapEntity, List<Position>> data)
-        {
-            Row = row;
-            Column = column;
-            Cells = cells;
-            Data = data;
-        }
+        public int Row;
+        public int Column;
+        public List<Position> Bricks;
+        public List<Position> Waters;
+        public List<Position> Stones;
+        public List<Position> Bushes;
+        public List<Position> Enemies;
+        public List<Position> Players;
+        public List<Position> Bases;
     }
 }

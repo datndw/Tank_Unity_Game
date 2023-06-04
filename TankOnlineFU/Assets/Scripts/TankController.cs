@@ -27,12 +27,13 @@ public class TankController : MonoBehaviour
             Direction = Direction.Down,
             Hp = 10,
             Point = 0,
-            Position = new Vector3(Random.Range(0, 20), Random.Range(0, 20), 0),
+            Position = new Vector3(GameSettings.Map.Players[0].Column, GameSettings.Map.Players[0].Row, 0),
             Guid = GUID.Generate()
         };
         gameObject.transform.position = _tank.Position;
         _tankMover = gameObject.GetComponent<TankMover>();
-        _cameraController = camera.GetComponent<CameraController>();
+        //_cameraController = camera.GetComponent<CameraController>();
+        _cameraController = GameObject.FindObjectOfType<CameraController>();
         _renderer = gameObject.GetComponent<SpriteRenderer>();
         Move(Direction.Down);
     }
@@ -56,7 +57,6 @@ public class TankController : MonoBehaviour
         {
             Move(Direction.Up);
         }
-
         if (Input.GetKey(KeyCode.Space))
         {
             Fire();
