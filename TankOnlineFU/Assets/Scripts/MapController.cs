@@ -7,6 +7,8 @@ public class MapController : MonoBehaviour
     [SerializeField] private GameObject m_Cell;
     [SerializeField] private GameObject m_Brick;
     [SerializeField] private GameObject m_Stone;
+    [SerializeField] private GameObject m_Water;
+    [SerializeField] private GameObject m_Bush;
     [SerializeField] private GameObject m_Player;
     private Map Map;
     private Cell Cell;
@@ -30,6 +32,14 @@ public class MapController : MonoBehaviour
         {
             Instantiate(m_Brick, m_Brick.transform.position + new Vector3(pos.Column, pos.Row,0), m_Brick.transform.rotation);
         }
+        foreach(Position pos in Map.Waters)
+        {
+            Instantiate(m_Water, m_Water.transform.position + new Vector3(pos.Column, pos.Row,0), m_Water.transform.rotation);
+        }
+        foreach(Position pos in Map.Bushes)
+        {
+            Instantiate(m_Bush, m_Bush.transform.position + new Vector3(pos.Column, pos.Row,0), m_Bush.transform.rotation);
+        }
         foreach (Position pos in Map.Stones)
         {
             Instantiate(m_Stone, m_Stone.transform.position + new Vector3(pos.Column, pos.Row, 0), m_Stone.transform.rotation);
@@ -38,7 +48,6 @@ public class MapController : MonoBehaviour
         {
             Instantiate(m_Player, m_Player.transform.position, m_Player.transform.rotation);
         }
-
     }
 
     // Update is called once per frame

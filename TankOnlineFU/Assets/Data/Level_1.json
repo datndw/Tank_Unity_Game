@@ -1,6 +1,6 @@
 ﻿{
     "Row": 40,
-    "Column": 80,
+    "Column": 40,
     "Bricks": [
         {
             "Row": 2,
@@ -2013,6 +2013,54 @@
         {
             "Row": 1,
             "Column": 3
+        },
+        {
+            "Row": 1,
+            "Column": 4
+        },
+        {
+            "Row": 1,
+            "Column": 5
+        },
+        {
+            "Row": 1,
+            "Column": 6
+        },
+        {
+            "Row": 1,
+            "Column": 7
+        },
+        {
+            "Row": 1,
+            "Column": 8
+        },
+        {
+            "Row": 1,
+            "Column": 9
+        },
+        {
+            "Row": 1,
+            "Column": 10
+        },
+        {
+            "Row": 1,
+            "Column": 11
+        },
+        {
+            "Row": 1,
+            "Column": 12
+        },
+        {
+            "Row": 1,
+            "Column": 13
+        },
+        {
+            "Row": 1,
+            "Column": 14
+        },
+        {
+            "Row": 1,
+            "Column": 15
         }
     ],
     "Players": [
