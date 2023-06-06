@@ -646,4 +646,7 @@ MonoBehaviour:
   m_Cell: {fileID: 2948267590866459476, guid: b4a9b6260bead45eda0de51ed8f115da, type: 3}
   m_Brick: {fileID: 4519267907821273629, guid: 4ac1417ec28b28445a469dc4afeb7135, type: 3}
   m_Stone: {fileID: 2897038263801920594, guid: 747991a387bc02e49b54de4e3a3578dd, type: 3}
+  m_Water: {fileID: 6178591616938432431, guid: f827aaf7e282c0d4c9d96710828461eb, type: 3}
+  m_Bush: {fileID: 8471925994446360138, guid: 12c05e3050bea0b43902ac66b1b831db, type: 3}
   m_Player: {fileID: 2185695495001854551, guid: a77168ab521034ef8b7b80b9dd64708e, type: 3}
+  m_Bases: {fileID: 3242474160515069518, guid: ab776096e59f2e045896530dd4702cc0, type: 3}
