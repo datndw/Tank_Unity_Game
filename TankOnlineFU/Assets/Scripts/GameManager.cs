@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private PausePanel m_PausePanel;
     [SerializeField] private GameoverPanel m_GameoverPanel;
     [SerializeField] private ConstructionPanel m_ConstructionPanel;
-    [SerializeField] private CreateLevelPanel m_CreateLevelPanel;
+    // [SerializeField] private CreateLevelPanel m_CreateLevelPanel;
     [SerializeField] private LevelManager m_LevelManager;
 
     [HideInInspector] private GameState m_GameState;
@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
         m_PausePanel.gameObject.SetActive(false);
         m_GameoverPanel.gameObject.SetActive(false);
         m_ConstructionPanel.gameObject.SetActive(false);
-        m_CreateLevelPanel.gameObject.SetActive(false);
+        // m_CreateLevelPanel.gameObject.SetActive(false);
         SetState(GameState.Home);
     }
 
@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviour
         m_PausePanel.gameObject.SetActive(m_GameState == GameState.Pause);
         m_GameoverPanel.gameObject.SetActive(m_GameState == GameState.GameOver);
         m_ConstructionPanel.gameObject.SetActive(m_GameState == GameState.Construction);
-        m_CreateLevelPanel.gameObject.SetActive(m_GameState == GameState.CreateLevel);
+        // m_CreateLevelPanel.gameObject.SetActive(m_GameState == GameState.CreateLevel);
 
         if (m_GameState == GameState.Pause)
         {
