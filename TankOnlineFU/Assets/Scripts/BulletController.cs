@@ -8,14 +8,18 @@ using UnityEngine;
 public class BulletController : MonoBehaviour
 {
     private AudioManager m_AudioManager;
+
     public Bullet Bullet { get; set; }
 
     public int MaxRange { get; set; }
 
+    private GameManager m_GameManager;
+    
     // Start is called before the first frame update
     private void Awake()
     {
         m_AudioManager = GameObject.FindObjectOfType<AudioManager>();
+        m_GameManager = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
@@ -56,7 +60,6 @@ public class BulletController : MonoBehaviour
                 {
                     Destroy(gameObject);
                 }
-
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
@@ -78,11 +81,28 @@ public class BulletController : MonoBehaviour
         {
             m_AudioManager.PlaySFX(m_AudioManager.bulletHitWater);
         }
-        else
+        else if (collision.gameObject.tag == "Brick")
         {
             m_AudioManager.PlaySFX(m_AudioManager.bulletHitBrick);
             Destroy(collision.gameObject);
             Destroy(gameObject);
+        }
+        else if (collision.gameObject.tag == "Base")
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+            m_GameManager.Gameover();
+        }
+        else if (collision.gameObject.tag == "Enemy")
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
+        else if (collision.gameObject.tag == "Player")
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+            m_GameManager.Gameover();
         }
     }
 }

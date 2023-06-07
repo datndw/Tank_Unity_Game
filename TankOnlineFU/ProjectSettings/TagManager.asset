@@ -11,6 +11,7 @@ TagManager:
   - Metal
   - Grass
   - Water
+  - Base
   layers:
   - Default
   - TransparentFX
@@ -19,13 +20,13 @@ TagManager:
   - Water
   - UI
   - Platform
-  - Tank
+  - Player
+  - Player Bullet
   - Bush
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Base
+  - Item
+  - Enemy Bullet
+  - Enemy
   - 
   - 
   - 
@@ -57,9 +58,24 @@ TagManager:
   - name: Platform
     uniqueID: 740371547
     locked: 0
-  - name: Tank
+  - name: Player
     uniqueID: 4212933817
     locked: 0
-  - name: Bush
+  - name: Player Bullet
     uniqueID: 1407607969
+    locked: 0
+  - name: Enemy Bullet
+    uniqueID: 871488021
+    locked: 0
+  - name: Grass
+    uniqueID: 1803228655
+    locked: 0
+  - name: Base
+    uniqueID: 3741514989
+    locked: 0
+  - name: Item
+    uniqueID: 3866277439
+    locked: 0
+  - name: Enemy
+    uniqueID: 4168470203
     locked: 0

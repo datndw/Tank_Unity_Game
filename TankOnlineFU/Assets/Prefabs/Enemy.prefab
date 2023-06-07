@@ -12,7 +12,10 @@ GameObject:
   - component: {fileID: 1104279190621613927}
   - component: {fileID: 1445588235494078850}
   - component: {fileID: -1577473727299617525}
-  m_Layer: 7
+  - component: {fileID: -310200173074319111}
+  - component: {fileID: -519886841283962236}
+  - component: {fileID: 4495627593410558272}
+  m_Layer: 13
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -72,8 +75,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -82033479
-  m_SortingLayer: 4
+  m_SortingLayerID: -126497093
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2555fa61700434466ae3a26a9fe66df0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -99,7 +102,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00239706, y: 0.009588256}
+  m_Offset: {x: -0.037008584, y: -0.0010615587}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -110,7 +113,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2384996, y: 0.2384997}
+  m_Size: {x: 1.6708876, y: 2.006354}
   m_EdgeRadius: 0
 --- !u!50 &-1577473727299617525
 Rigidbody2D:
@@ -133,3 +136,55 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &-310200173074319111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2178223789173475439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a39883fe1430543f492e352fc7209104, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tankUp: {fileID: 21300000, guid: dcb965d93e3d74aa4a4d1a96f10103b9, type: 3}
+  tankDown: {fileID: 21300000, guid: 2555fa61700434466ae3a26a9fe66df0, type: 3}
+  tankLeft: {fileID: 21300000, guid: 12ab9f9eed1094c54945e97669ccae02, type: 3}
+  tankRight: {fileID: 21300000, guid: d1e5bfe0793af45329ebdc66aef22b6f, type: 3}
+  target: {fileID: 0}
+  moveSpeed: 3
+--- !u!114 &-519886841283962236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2178223789173475439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce52482f72ca442e6b3880f73fb4f360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+--- !u!114 &4495627593410558272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2178223789173475439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb23512406054bfebb417dfedf21e7a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 7740309687340280598, guid: 55d77b55c3c7a437ea8d0c1599983c97, type: 3}
+  spriteRight: {fileID: 21300000, guid: 97ce0d674edfe418cabcd19ce0f5b6da, type: 3}
+  spriteLeft: {fileID: 21300000, guid: 6783b99fa46ad430680016ebeb8ea713, type: 3}
+  spriteUp: {fileID: 21300000, guid: 27a8e2e75693e4e69ade2de1a9ac6ce3, type: 3}
+  spriteDown: {fileID: 21300000, guid: c809315d9e24d474ba994bee424cf98c, type: 3}
+  speed: 10
+  maxRange: 10
+  delay: 3
+  lastFire: 0

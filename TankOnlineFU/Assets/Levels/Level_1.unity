@@ -650,3 +650,4 @@ MonoBehaviour:
   m_Bush: {fileID: 8471925994446360138, guid: 12c05e3050bea0b43902ac66b1b831db, type: 3}
   m_Player: {fileID: 2185695495001854551, guid: a77168ab521034ef8b7b80b9dd64708e, type: 3}
   m_Bases: {fileID: 3242474160515069518, guid: ab776096e59f2e045896530dd4702cc0, type: 3}
+  m_Enemies: {fileID: 2178223789173475439, guid: bb4ea6636980048bbb8428e63190d6b2, type: 3}

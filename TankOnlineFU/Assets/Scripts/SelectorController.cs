@@ -11,6 +11,7 @@ public class SelectorController : MonoBehaviour
     private AudioManager m_AudioManager;
     private Vector3 _singlePlayerPos;
     private Vector3 _multiplePlayerPos;
+    private Vector3 _createLevelPos;
     private Vector3 _constructionPos;
     private Vector3 _currentPos;
 
@@ -19,6 +20,7 @@ public class SelectorController : MonoBehaviour
         m_AudioManager = GameObject.FindObjectOfType<AudioManager>();
         _singlePlayerPos = GameObject.Find("txt_single_player").transform.position;
         _multiplePlayerPos = GameObject.Find("txt_multiple_players").transform.position;
+        _createLevelPos = GameObject.Find("txt_create_level").transform.position;
         _constructionPos = GameObject.Find("txt_construction").transform.position;
     }
 
@@ -26,7 +28,7 @@ public class SelectorController : MonoBehaviour
     void Start()
     {
         m_GameManager = FindObjectOfType<GameManager>();
-        _singlePlayerPos.x = _multiplePlayerPos.x = _constructionPos.x -= 400;
+        _singlePlayerPos.x = _multiplePlayerPos.x = _createLevelPos.x = _constructionPos.x -= 400;
         GameObject.Find("img_selector").transform.position = _currentPos = _singlePlayerPos;
     }
 
@@ -67,6 +69,11 @@ public class SelectorController : MonoBehaviour
                     m_GameManager.Play();
                     break;
                 }
+            case var pos when pos == _createLevelPos:
+                {
+                    m_GameManager.CreateLevel();
+                    break;
+                }
             case var pos when pos == _constructionPos:
                 {
                     m_GameManager.Construction();
@@ -89,9 +96,14 @@ public class SelectorController : MonoBehaviour
                     GameObject.Find("img_selector").transform.position = _currentPos = _singlePlayerPos;
                     break;
                 }
-            case var pos when pos == _constructionPos:
+            case var pos when pos == _createLevelPos:
                 {
                     GameObject.Find("img_selector").transform.position = _currentPos = _multiplePlayerPos;
+                    break;
+                }
+            case var pos when pos == _constructionPos:
+                {
+                    GameObject.Find("img_selector").transform.position = _currentPos = _createLevelPos;
                     break;
                 }
 
@@ -108,6 +120,11 @@ public class SelectorController : MonoBehaviour
                     break;
                 }
             case var pos when pos == _multiplePlayerPos:
+                {
+                    GameObject.Find("img_selector").transform.position = _currentPos = _createLevelPos;
+                    break;
+                }
+            case var pos when pos == _createLevelPos:
                 {
                     GameObject.Find("img_selector").transform.position = _currentPos = _constructionPos;
                     break;

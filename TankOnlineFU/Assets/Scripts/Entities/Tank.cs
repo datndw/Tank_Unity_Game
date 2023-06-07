@@ -15,7 +15,8 @@ namespace Entities
         public int Hp { get; set; }
 
         public GUID Guid { get; set; }
-        public Vector3 Position { get; set; }
+        //public Vector3 Position { get; set; }
+        public Vector3 Position;
 
         public void Move(float x, float y)
         {

@@ -3,7 +3,16 @@ guid: 152d4c7242ce85749b8dd6b0e6c2c630
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - musicSource: {instanceID: 0}
+  - sfxSource: {instanceID: 0}
+  - startGame: {instanceID: 0}
+  - loseGame: {instanceID: 0}
+  - bulletHitBrick: {fileID: 8300000, guid: e40e7ea66977e60488ee183f49813455, type: 3}
+  - bulletHitMetal: {fileID: 8300000, guid: 160a78052b89c3f4ab0463728b8b1389, type: 3}
+  - bulletHitGrass: {fileID: 8300000, guid: e6099b6073bab204b94b7313347f2bde, type: 3}
+  - bulletHitWater: {fileID: 8300000, guid: 5a90cd9fcad849d43b1fd30391511dac, type: 3}
+  - bubbleSound: {fileID: 8300000, guid: 5a90cd9fcad849d43b1fd30391511dac, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

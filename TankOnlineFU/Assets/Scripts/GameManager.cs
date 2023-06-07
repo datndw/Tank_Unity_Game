@@ -32,7 +32,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private LevelManager m_LevelManager;
 
     [HideInInspector] private GameState m_GameState;
-    [HideInInspector] bool m_Win;
 
 
     private void Awake()
@@ -112,7 +111,11 @@ public class GameManager : MonoBehaviour
 
     private void CreateNewLevel()
     {
-        var map = new Map();
+        var map = new Map()
+        {
+            Row = 30,
+            Column = 30
+        };
     }
 
     public void Pause()
@@ -125,12 +128,10 @@ public class GameManager : MonoBehaviour
         SetState(GameState.GamePlay);
     }
 
-    public void Gameover(bool win)
+    public void Gameover()
     {
-        m_Win = win;
         m_AudioInstance.PlaySFX(m_AudioInstance.loseGame);
         SetState(GameState.GameOver);
-        //m_GameoverPanel.DisplayResult(m_Win);
     }
     public void NextLevel()
     {
