@@ -43,7 +43,7 @@ public class SelectorOverController : MonoBehaviour
             PreviousOption(_currentPos);
         }
 
-        if (Input.GetKey(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Return))
         {
             Enter(_currentPos);
         }
@@ -55,10 +55,12 @@ public class SelectorOverController : MonoBehaviour
         {
             case var pos when pos == _backToHomePos:
                 {
+                    m_GameManager.Home();
                     break;
                 }
             case var pos when pos == _exitPos:
                 {
+                    Application.Quit();
                     break;
                 }
         }

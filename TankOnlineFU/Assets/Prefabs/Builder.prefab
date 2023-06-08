@@ -170,3 +170,5 @@ MonoBehaviour:
   Metal: {fileID: 2897038263801920594, guid: 747991a387bc02e49b54de4e3a3578dd, type: 3}
   Bush: {fileID: 8471925994446360138, guid: 12c05e3050bea0b43902ac66b1b831db, type: 3}
   Water: {fileID: 6178591616938432431, guid: f827aaf7e282c0d4c9d96710828461eb, type: 3}
+  Enemy: {fileID: 2178223789173475439, guid: bb4ea6636980048bbb8428e63190d6b2, type: 3}
+  Player: {fileID: 2185695495001854551, guid: a77168ab521034ef8b7b80b9dd64708e, type: 3}

@@ -27,9 +27,10 @@ public class TankController : MonoBehaviour
             Direction = Direction.Down,
             Hp = 10,
             Point = 0,
-            Position = new Vector3(GameSettings.Map.Players[0].Column, GameSettings.Map.Players[0].Row, 0),
+            Position = new Vector3(gameObject.gameObject.transform.position.x, gameObject.gameObject.transform.position.y, 0),
             Guid = GUID.Generate()
         };
+
         gameObject.transform.position = _tank.Position;
         _tankMover = gameObject.GetComponent<TankMover>();
         //_cameraController = camera.GetComponent<CameraController>();

@@ -27,5 +27,6 @@ public class MapLoader : MonoBehaviour
                 GameSettings.createdLevel++;
             }
         }
+        GameSettings.createdLevel = GameSettings.createdLevel / 2;
     }
 }

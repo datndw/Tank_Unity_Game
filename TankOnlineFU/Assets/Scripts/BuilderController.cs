@@ -26,6 +26,8 @@ public class BuilderController : MonoBehaviour
     public GameObject Metal;
     public GameObject Bush;
     public GameObject Water;
+    public GameObject Enemy;
+    public GameObject Player;
 
 
     private void Start()
@@ -74,13 +76,33 @@ public class BuilderController : MonoBehaviour
         {
             
         }
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Alpha0))
+        {
+            buildingBlock = "";
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             buildingBlock = "Brick";
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             buildingBlock = "Metal";
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            buildingBlock = "Water";
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            buildingBlock = "Bush";
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            buildingBlock = "Enemy";
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha6))
+        {
+            buildingBlock = "Player";
         }
     }
 
@@ -92,6 +114,36 @@ public class BuilderController : MonoBehaviour
         }else if(buildingBlock.Equals(nameof(Metal))){
             Instantiate(Metal, _tank.Position, Quaternion.identity);
             GameSettings.Map.Stones.Add(new Position((int)_tank.Position.y, (int)_tank.Position.x));
+        }
+        else if (buildingBlock.Equals(nameof(Water)))
+        {
+            Instantiate(Water, _tank.Position, Quaternion.identity);
+            GameSettings.Map.Waters.Add(new Position((int)_tank.Position.y, (int)_tank.Position.x));
+        }
+        else if (buildingBlock.Equals(nameof(Bush)))
+        {
+            Instantiate(Bush, _tank.Position, Quaternion.identity);
+            GameSettings.Map.Bushes.Add(new Position((int)_tank.Position.y, (int)_tank.Position.x));
+        }
+        else if (buildingBlock.Equals(nameof(Enemy)))
+        {
+            GameObject enemy = Instantiate(Enemy, _tank.Position, Quaternion.identity);
+            Destroy(enemy.GetComponent<EnemyController>());
+            Destroy(enemy.GetComponent<TankMover>());
+            Destroy(enemy.GetComponent<TankFirer>());
+            Destroy(enemy.GetComponent<Rigidbody2D>());
+            Destroy(enemy.GetComponent<BoxCollider2D>());
+            GameSettings.Map.Enemies.Add(new Position((int)_tank.Position.y, (int)_tank.Position.x));
+        }
+        else if (buildingBlock.Equals(nameof(Player)))
+        {
+            GameObject player = Instantiate(Player, _tank.Position, Quaternion.identity);
+            Destroy(player.GetComponent<TankController>());
+            Destroy(player.GetComponent<TankMover>());
+            Destroy(player.GetComponent<TankFirer>());
+            Destroy(player.GetComponent<Rigidbody2D>());
+            Destroy(player.GetComponent<BoxCollider2D>());
+            GameSettings.Map.Players.Add(new Position((int)_tank.Position.y, (int)_tank.Position.x));
         }
     }
 

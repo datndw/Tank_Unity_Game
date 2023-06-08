@@ -29,7 +29,7 @@ public class EnemyController : MonoBehaviour
             Direction = Direction.Down,
             Hp = 10,
             Point = 0,
-            Position = new Vector3(10, 14, 0),
+            Position = new Vector3(gameObject.gameObject.transform.position.x, gameObject.gameObject.transform.position.y, 0),
             Guid = GUID.Generate()
         };
         gameObject.transform.position = _tank.Position;

@@ -47,7 +47,7 @@ public class SelectorController : MonoBehaviour
             PreviousOption(_currentPos);
         }
 
-        if (Input.GetKey(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Return))
         {
             //m_GameManager.Play();
             Enter(_currentPos);

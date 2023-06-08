@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     const string START_LEVEL = "Level_1";
-    const string CREATE_LEVEL = "CreatingLevel";
+    const string CREATE_LEVEL = "BaseLevel";
     public static GameManager m_Instance;
     public static AudioManager m_AudioInstance;
     public static GameManager Instance
@@ -97,7 +97,7 @@ public class GameManager : MonoBehaviour
 
     public void Play(string level)
     {
-        SceneManager.LoadScene(level);
+        SceneManager.LoadScene("Level_1");
         MapLoader.LoadMap(level);
         SetState(GameState.GamePlay);
     }
