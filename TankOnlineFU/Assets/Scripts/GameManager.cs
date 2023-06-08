@@ -9,6 +9,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     const string START_LEVEL = "Level_1";
+    const string CREATE_LEVEL = "CreatingLevel";
     public static GameManager m_Instance;
     public static AudioManager m_AudioInstance;
     public static GameManager Instance
@@ -28,7 +29,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private PausePanel m_PausePanel;
     [SerializeField] private GameoverPanel m_GameoverPanel;
     [SerializeField] private ConstructionPanel m_ConstructionPanel;
-    // [SerializeField] private CreateLevelPanel m_CreateLevelPanel;
+    [SerializeField] private CreateLevelPanel m_CreateLevelPanel;
     [SerializeField] private LevelManager m_LevelManager;
 
     [HideInInspector] private GameState m_GameState;
@@ -55,7 +56,7 @@ public class GameManager : MonoBehaviour
         m_PausePanel.gameObject.SetActive(false);
         m_GameoverPanel.gameObject.SetActive(false);
         m_ConstructionPanel.gameObject.SetActive(false);
-        // m_CreateLevelPanel.gameObject.SetActive(false);
+        m_CreateLevelPanel.gameObject.SetActive(false);
         SetState(GameState.Home);
     }
 
@@ -67,7 +68,7 @@ public class GameManager : MonoBehaviour
         m_PausePanel.gameObject.SetActive(m_GameState == GameState.Pause);
         m_GameoverPanel.gameObject.SetActive(m_GameState == GameState.GameOver);
         m_ConstructionPanel.gameObject.SetActive(m_GameState == GameState.Construction);
-        // m_CreateLevelPanel.gameObject.SetActive(m_GameState == GameState.CreateLevel);
+         m_CreateLevelPanel.gameObject.SetActive(m_GameState == GameState.CreateLevel);
 
         if (m_GameState == GameState.Pause)
         {
@@ -105,19 +106,11 @@ public class GameManager : MonoBehaviour
 
     public void CreateLevel()
     {
+        SceneManager.LoadScene(CREATE_LEVEL);
+        MapLoader.LoadMap(CREATE_LEVEL);
         SetState(GameState.CreateLevel);
-        CreateNewLevel();
     }
-
-    private void CreateNewLevel()
-    {
-        var map = new Map()
-        {
-            Row = 30,
-            Column = 30
-        };
-    }
-
+    
     public void Pause()
     {
         SetState(GameState.Pause);

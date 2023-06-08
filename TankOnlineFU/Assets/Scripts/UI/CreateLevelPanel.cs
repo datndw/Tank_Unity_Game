@@ -14,6 +14,11 @@ public class CreateLevelPanel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+
+    public void BtnSave_Pressed()
+    {
+
     }
 }
