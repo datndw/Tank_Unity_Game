@@ -130,7 +130,8 @@ public class GameManager : MonoBehaviour
         m_Win = win;
         m_AudioInstance.PlaySFX(m_AudioInstance.loseGame);
         SetState(GameState.GameOver);
-        //m_GameoverPanel.DisplayResult(m_Win);
+        m_GameoverPanel.gameObject.SetActive(true);
+        // m_GameoverPanel.DisplayResult(m_Win);
     }
     public void NextLevel()
     {
