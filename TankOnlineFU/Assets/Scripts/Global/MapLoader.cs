@@ -16,4 +16,16 @@ public class MapLoader : MonoBehaviour
         }
 
     }
+    public static void LoadCreatedLevels()
+    {
+        string savePath = Application.dataPath + "/Data/";
+        string[] fileNames = Directory.GetFiles(savePath);
+        foreach (string fileName in fileNames)
+        {
+            if (fileName.Contains("create"))
+            {
+                GameSettings.createdLevel++;
+            }
+        }
+    }
 }

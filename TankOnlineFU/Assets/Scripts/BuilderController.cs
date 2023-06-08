@@ -21,7 +21,6 @@ public class BuilderController : MonoBehaviour
     public new GameObject camera;
     public float blinkInterval = 0.5f;
     private string buildingBlock = "";
-    private Map buildingMap;
 
     public GameObject Brick;
     public GameObject Metal;
@@ -46,11 +45,6 @@ public class BuilderController : MonoBehaviour
         _renderer = gameObject.GetComponent<SpriteRenderer>();
         Move(Direction.Down);
         InvokeRepeating("ToggleVisibility", blinkInterval, blinkInterval);
-        buildingMap = new Map()
-        {
-            Row = 30,
-            Column = 30
-        };
     }
 
     // Update is called once per frame
@@ -94,10 +88,10 @@ public class BuilderController : MonoBehaviour
     {
         if (buildingBlock.Equals(nameof(Brick))){
             Instantiate(Brick, _tank.Position,Quaternion.identity );
-            buildingMap.Bricks.Add(new Position((int)_tank.Position.y,(int)_tank.Position.x));
+            GameSettings.Map.Bricks.Add(new Position((int)_tank.Position.y,(int)_tank.Position.x));
         }else if(buildingBlock.Equals(nameof(Metal))){
             Instantiate(Metal, _tank.Position, Quaternion.identity);
-            buildingMap.Stones.Add(new Position((int)_tank.Position.y, (int)_tank.Position.x));
+            GameSettings.Map.Stones.Add(new Position((int)_tank.Position.y, (int)_tank.Position.x));
         }
     }
 

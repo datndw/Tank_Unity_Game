@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameoverPanel m_GameoverPanel;
     [SerializeField] private ConstructionPanel m_ConstructionPanel;
     [SerializeField] private CreateLevelPanel m_CreateLevelPanel;
+    [SerializeField] private ChooseLevelPanel m_ChooseLevelPanel;
     [SerializeField] private LevelManager m_LevelManager;
 
     [HideInInspector] private GameState m_GameState;
@@ -37,6 +38,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        MapLoader.LoadCreatedLevels();
         m_AudioInstance = GameObject.FindObjectOfType<AudioManager>();
         if (m_Instance == null)
         {
@@ -57,6 +59,7 @@ public class GameManager : MonoBehaviour
         m_GameoverPanel.gameObject.SetActive(false);
         m_ConstructionPanel.gameObject.SetActive(false);
         m_CreateLevelPanel.gameObject.SetActive(false);
+        m_ChooseLevelPanel.gameObject.SetActive(false);
         SetState(GameState.Home);
     }
 
@@ -68,7 +71,8 @@ public class GameManager : MonoBehaviour
         m_PausePanel.gameObject.SetActive(m_GameState == GameState.Pause);
         m_GameoverPanel.gameObject.SetActive(m_GameState == GameState.GameOver);
         m_ConstructionPanel.gameObject.SetActive(m_GameState == GameState.Construction);
-         m_CreateLevelPanel.gameObject.SetActive(m_GameState == GameState.CreateLevel);
+        m_CreateLevelPanel.gameObject.SetActive(m_GameState == GameState.CreateLevel);
+        m_ChooseLevelPanel.gameObject.SetActive(m_GameState == GameState.ChooseLevel);
 
         if (m_GameState == GameState.Pause)
         {
@@ -91,12 +95,11 @@ public class GameManager : MonoBehaviour
         return m_GameState == GameState.GamePlay;
     }
 
-    public void Play()
+    public void Play(string level)
     {
-        SceneManager.LoadScene(START_LEVEL);
-        MapLoader.LoadMap(START_LEVEL);
+        SceneManager.LoadScene(level);
+        MapLoader.LoadMap(level);
         SetState(GameState.GamePlay);
-
     }
 
     public void Construction()
@@ -120,6 +123,10 @@ public class GameManager : MonoBehaviour
     {
         SetState(GameState.GamePlay);
     }
+    public void Home()
+    {
+        SetState(GameState.Home);
+    }
 
     public void Gameover()
     {
@@ -142,5 +149,10 @@ public class GameManager : MonoBehaviour
     public void Restart()
     {
 
+    }
+
+    public void ChooseLevel()
+    {
+        SetState(GameState.ChooseLevel);
     }
 }

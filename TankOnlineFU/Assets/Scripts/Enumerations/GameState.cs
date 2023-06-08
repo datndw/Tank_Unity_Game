@@ -7,6 +7,7 @@
         GameOver,
         Home,
         Construction,
-        CreateLevel
+        CreateLevel,
+        ChooseLevel
     }
 }

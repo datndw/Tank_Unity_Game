@@ -19,6 +19,7 @@ public class CreateLevelPanel : MonoBehaviour
 
     public void BtnSave_Pressed()
     {
-
+        MapSaver.Save();
+        m_GameManager.Home();
     }
 }

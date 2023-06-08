@@ -60,13 +60,13 @@ public class SelectorController : MonoBehaviour
         {
             case var pos when pos == _singlePlayerPos:
                 {
-                    m_GameManager.Play();
+                    m_GameManager.ChooseLevel();
                     break;
                 }
             case var pos when pos == _multiplePlayerPos:
                 {
                     GameSettings.isMultiplePlayer = true;
-                    m_GameManager.Play();
+                    m_GameManager.ChooseLevel();
                     break;
                 }
             case var pos when pos == _createLevelPos:
