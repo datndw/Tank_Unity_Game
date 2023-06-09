@@ -135,32 +135,50 @@ public class LevelSelectorController : MonoBehaviour
                 }
             case var pos when pos == _createLevel1Pos:
                 {
-                    m_GameManager.Play("Level_1_create");
+                    if (!GameObject.Find("txt_placeholder_1").GetComponent<TextMeshProUGUI>().text.Equals("Not Created!"))
+                    {
+                        m_GameManager.Play("Level_1_create");
+                    }
                     break;
                 }
             case var pos when pos == _createLevel2Pos:
                 {
-                    m_GameManager.Play("Level_2_create");
+                    if (!GameObject.Find("txt_placeholder_2").GetComponent<TextMeshProUGUI>().text.Equals("Not Created!"))
+                    {
+                        m_GameManager.Play("Level_2_create");
+                    }
                     break;
                 }
             case var pos when pos == _createLevel3Pos:
                 {
-                    m_GameManager.Play("Level_3_create");
+                    if (!GameObject.Find("txt_placeholder_3").GetComponent<TextMeshProUGUI>().text.Equals("Not Created!"))
+                    {
+                        m_GameManager.Play("Level_3_create");
+                    }
                     break;
                 }
             case var pos when pos == _createLevel4Pos:
                 {
-                    m_GameManager.Play("Level_4_create");
+                    if (!GameObject.Find("txt_placeholder_4").GetComponent<TextMeshProUGUI>().text.Equals("Not Created!"))
+                    {
+                        m_GameManager.Play("Level_4_create");
+                    }
                     break;
                 }
             case var pos when pos == _createLevel5Pos:
                 {
-                    m_GameManager.Play("Level_5_create");
+                    if (!GameObject.Find("txt_placeholder_5").GetComponent<TextMeshProUGUI>().text.Equals("Not Created!"))
+                    {
+                        m_GameManager.Play("Level_5_create");
+                    }
                     break;
                 }
             case var pos when pos == _createLevel6Pos:
                 {
-                    m_GameManager.Play("Level_6_create");
+                    if (!GameObject.Find("txt_placeholder_6").GetComponent<TextMeshProUGUI>().text.Equals("Not Created!"))
+                    {
+                        m_GameManager.Play("Level_6_create");
+                    }
                     break;
                 }
 
