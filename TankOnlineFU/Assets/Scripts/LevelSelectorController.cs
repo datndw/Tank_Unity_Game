@@ -20,16 +20,15 @@ public class LevelSelectorController : MonoBehaviour
     private Vector3 _createLevel6Pos;
     private Vector3 _currentPos;
 
-    private GameObject _levelCreate1;
-    private GameObject _levelCreate2;
-    private GameObject _levelCreate3;
-    private GameObject _levelCreate4;
-    private GameObject _levelCreate5;
-    private GameObject _levelCreate6;
+    //private GameObject _levelCreate1;
+    //private GameObject _levelCreate2;
+    //private GameObject _levelCreate3;
+    //private GameObject _levelCreate4;
+    //private GameObject _levelCreate5;
+    //private GameObject _levelCreate6;
 
     private void Awake()
     {
-        
         m_AudioManager = GameObject.FindObjectOfType<AudioManager>();
         _level1Pos = GameObject.Find("txt_level_1").transform.position;
         _level2Pos = GameObject.Find("txt_level_2").transform.position;
@@ -40,13 +39,13 @@ public class LevelSelectorController : MonoBehaviour
         _createLevel5Pos = GameObject.Find("txt_placeholder_5").transform.position;
         _createLevel6Pos = GameObject.Find("txt_placeholder_6").transform.position;
 
-        _levelCreate1 = GameObject.Find("txt_placeholder_1");
-        _levelCreate2 = GameObject.Find("txt_placeholder_2");
-        _levelCreate3 = GameObject.Find("txt_placeholder_3");
-        _levelCreate4 = GameObject.Find("txt_placeholder_4");
-        _levelCreate5 = GameObject.Find("txt_placeholder_5");
-        _levelCreate6 = GameObject.Find("txt_placeholder_6");
-        
+        //_levelCreate1 = GameObject.Find("txt_placeholder_1");
+        //_levelCreate2 = GameObject.Find("txt_placeholder_2");
+        //_levelCreate3 = GameObject.Find("txt_placeholder_3");
+        //_levelCreate4 = GameObject.Find("txt_placeholder_4");
+        //_levelCreate5 = GameObject.Find("txt_placeholder_5");
+        //_levelCreate6 = GameObject.Find("txt_placeholder_6");
+
 
 
     }
@@ -54,10 +53,22 @@ public class LevelSelectorController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 6; i > GameSettings.createdLevel; i--)
-        {
-            GameObject.Find("txt_placeholder_" + i).GetComponent<TextMeshProUGUI>().text = "Not Created!";
-        }
+        //for (int i = 6; i > GameSettings.createdLevel; i--)
+        //{
+        //    GameObject.Find("txt_placeholder_" + i).GetComponent<TextMeshProUGUI>().text = "Not Created!";
+        //}
+
+        ////for (int i = 1; i <= 6; i++)
+        ////{
+        ////    if (i <= GameSettings.createdLevel)
+        ////    {
+        ////        GameObject.Find("txt_placeholder_" + i).GetComponent<TextMeshProUGUI>().text = "Level " + i;
+        ////    }
+        ////    else
+        ////    {
+        ////        GameObject.Find("txt_placeholder_" + i).GetComponent<TextMeshProUGUI>().text = "Not Created!";
+        ////    }
+        ////}
         m_GameManager = FindObjectOfType<GameManager>();
         _level1Pos.x = _level2Pos.x -= 400;
         _createLevel1Pos.x = _createLevel2Pos.x = _createLevel3Pos.x = _createLevel4Pos.x = _createLevel5Pos.x = _createLevel6Pos.x -= 400;
@@ -67,6 +78,7 @@ public class LevelSelectorController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        GenerateLevelList();
         if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
         {
             m_AudioManager.PlaySFX(m_AudioManager.bubbleSound);
@@ -92,6 +104,21 @@ public class LevelSelectorController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return))
         {
             Enter(_currentPos);
+        }
+    }
+
+    private void GenerateLevelList()
+    {
+        for (int i = 1; i <= 6; i++)
+        {
+            if (i <= GameSettings.createdLevel)
+            {
+                GameObject.Find("txt_placeholder_" + i).GetComponent<TextMeshProUGUI>().text = "Level " + i;
+            }
+            else
+            {
+                GameObject.Find("txt_placeholder_" + i).GetComponent<TextMeshProUGUI>().text = "Not Created!";
+            }
         }
     }
 

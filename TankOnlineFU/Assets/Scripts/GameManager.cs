@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour
         m_CreateLevelPanel.gameObject.SetActive(m_GameState == GameState.CreateLevel);
         m_ChooseLevelPanel.gameObject.SetActive(m_GameState == GameState.ChooseLevel);
 
-        if (m_GameState == GameState.Pause)
+        if (m_GameState == GameState.Pause || m_GameState == GameState.Home || m_GameState == GameState.Construction)
         {
             Time.timeScale = 0;
         }
