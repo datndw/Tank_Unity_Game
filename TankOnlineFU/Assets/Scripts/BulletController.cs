@@ -104,5 +104,10 @@ public class BulletController : MonoBehaviour
             Destroy(gameObject);
             m_GameManager.Gameover();
         }
+        else if (collision.gameObject.tag == "bulletEnemy")
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
     }
 }

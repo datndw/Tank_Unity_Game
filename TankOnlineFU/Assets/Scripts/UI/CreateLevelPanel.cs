@@ -22,4 +22,9 @@ public class CreateLevelPanel : MonoBehaviour
         MapSaver.Save();
         m_GameManager.Home();
     }
+
+    public void BtnDiscard_Pressed()
+    {
+        m_GameManager.Home();
+    }
 }

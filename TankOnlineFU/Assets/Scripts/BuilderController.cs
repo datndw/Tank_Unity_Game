@@ -1,10 +1,13 @@
 using System;
+using System.Collections.Generic;
 using DefaultNamespace;
 using Entities;
 using Enumerations;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 public class BuilderController : MonoBehaviour
 {
@@ -28,6 +31,9 @@ public class BuilderController : MonoBehaviour
     public GameObject Water;
     public GameObject Enemy;
     public GameObject Player;
+    public GameObject Base;
+
+    public bool isDeploying = false;
 
 
     private void Start()
@@ -38,7 +44,7 @@ public class BuilderController : MonoBehaviour
             Direction = Direction.Down,
             Hp = 10,
             Point = 0,
-            Position = new Vector3(10, 10, 0),
+            Position = new Vector3(15, 15, 0),
             Guid = GUID.Generate()
         };
         gameObject.transform.position = _tank.Position;
@@ -103,6 +109,63 @@ public class BuilderController : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Alpha6))
         {
             buildingBlock = "Player";
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha7))
+        {
+            buildingBlock = "Base";
+        }
+        else if (Input.GetKeyDown(KeyCode.E)){
+            buildingBlock = "";
+            DestroyPrefabsAtPosition(gameObject.transform.position);
+        }
+    }
+
+    private void DestroyPrefabsAtPosition(Vector3 position)
+    {
+        List<GameObject> gobjs = new();
+        foreach(GameObject gobj in GameObject.FindGameObjectsWithTag("Brick"))
+        {
+            gobjs.Add(gobj);
+            GameSettings.Map.Bricks.RemoveAll(x => x.Column == (int)_tank.Position.x && x.Row == (int)_tank.Position.y) ;
+        }
+
+        foreach (GameObject gobj in GameObject.FindGameObjectsWithTag("Metal"))
+        {
+            gobjs.Add(gobj);
+            GameSettings.Map.Stones.RemoveAll(x => x.Column == (int)_tank.Position.x && x.Row == (int)_tank.Position.y);
+        }
+        foreach (GameObject gobj in GameObject.FindGameObjectsWithTag("Grass"))
+        {
+            gobjs.Add(gobj);
+            GameSettings.Map.Bushes.RemoveAll(x => x.Column == (int)_tank.Position.x && x.Row == (int)_tank.Position.y);
+        }
+        foreach (GameObject gobj in GameObject.FindGameObjectsWithTag("Water"))
+        {
+            gobjs.Add(gobj);
+            GameSettings.Map.Waters.RemoveAll(x => x.Column == (int)_tank.Position.x && x.Row == (int)_tank.Position.y);
+        }
+        foreach (GameObject gobj in GameObject.FindGameObjectsWithTag("Player"))
+        {
+            gobjs.Add(gobj);
+            GameSettings.Map.Players.RemoveAll(x => x.Column == (int)_tank.Position.x && x.Row == (int)_tank.Position.y);
+        }
+        foreach (GameObject gobj in GameObject.FindGameObjectsWithTag("Enemy"))
+        {
+            gobjs.Add(gobj);
+            GameSettings.Map.Enemies.RemoveAll(x => x.Column == (int)_tank.Position.x && x.Row == (int)_tank.Position.y);
+        }
+        foreach (GameObject gobj in GameObject.FindGameObjectsWithTag("Base"))
+        {
+            gobjs.Add(gobj);
+            GameSettings.Map.Bases.RemoveAll(x => x.Column == (int)_tank.Position.x && x.Row == (int)_tank.Position.y);
+        }
+
+        foreach (GameObject prefab in gobjs)
+        {
+            if (prefab.transform.position == position)
+            {
+                Destroy(prefab); // Destroy the prefab if its position matches the target position
+            }
         }
     }
 
