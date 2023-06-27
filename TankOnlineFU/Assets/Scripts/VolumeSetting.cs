@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class VolumeSetting : MonoBehaviour
@@ -11,7 +8,7 @@ public class VolumeSetting : MonoBehaviour
 
     private void Awake()
     {
-        m_AudioManager = GameObject.FindObjectOfType<AudioManager>();
+        m_AudioManager = FindObjectOfType<AudioManager>();
     }
     private void Start()
     {
