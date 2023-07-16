@@ -105,7 +105,11 @@ public class EnemyController : MonoBehaviour
             if (health <= 0)
             {
                 Destroy(gameObject);
-                m_GameManager.Gamewon();
+                var enemy=GameObject.FindGameObjectsWithTag("Enemy");
+                Debug.Log(enemy.Length);
+                if(enemy.Length<=1){
+                    m_GameManager.Gamewon();
+                }
             }
         }
     }

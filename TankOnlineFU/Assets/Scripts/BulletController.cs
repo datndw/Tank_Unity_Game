@@ -86,7 +86,7 @@ public class BulletController : MonoBehaviour
         {
             m_AudioManager.PlaySFX(m_AudioManager.bulletHitBrick);
             //animation
-            animator.SetTrigger("bulletHit");
+            // animator.SetTrigger("bulletHit");
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }
@@ -103,9 +103,9 @@ public class BulletController : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Player")
         {
-            // Destroy(collision.gameObject);
+            Destroy(collision.gameObject);
             Destroy(gameObject);
-            // m_GameManager.Gameover();
+            m_GameManager.Gameover();
         }
         else if (collision.gameObject.tag == "bulletEnemy")
         {

@@ -138,21 +138,21 @@ public class GameManager : MonoBehaviour
     }
     public void Gamewon()
     {
-        Debug.Log("win");
         m_AudioInstance.PlaySFX(m_AudioInstance.loseGame);
         SetState(GameState.GameWon);
     }
     public void NextLevel()
     {
-        string nextLevel = m_LevelManager.GetNextLevel();
-        if (!string.IsNullOrEmpty(nextLevel))
-        {
-            SceneManager.LoadScene(nextLevel);
-        }
-        else
-        {
-            Debug.LogWarning("No more level");
-        }
+        // string nextLevel = m_LevelManager.GetNextLevel();
+        // if (!string.IsNullOrEmpty(nextLevel))
+        // {
+        //     SceneManager.LoadScene(nextLevel);
+        // }
+        // else
+        // {
+        //     Debug.LogWarning("No more level");
+        // }
+        Play("Level_2");
     }
 
     public void Restart()
