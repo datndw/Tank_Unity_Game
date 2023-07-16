@@ -1,9 +1,12 @@
+using System;
+using System.Collections;
 using DefaultNamespace;
 using Entities;
 using Enumerations;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public class TankController : MonoBehaviour
 {
@@ -28,6 +31,7 @@ public class TankController : MonoBehaviour
             Hp = 10,
             Point = 0,
             Position = new Vector3(gameObject.gameObject.transform.position.x, gameObject.gameObject.transform.position.y, 0),
+            Power = 1,
             Guid = GUID.Generate()
         };
 
@@ -79,7 +83,7 @@ public class TankController : MonoBehaviour
         };
     }
 
-    private void Fire()
+    private async void Fire()
     {
         Bullet b = new Bullet
         {
@@ -87,6 +91,29 @@ public class TankController : MonoBehaviour
             //Tank = _tank,
             InitialPosition = _tank.Position
         };
-        GetComponent<TankFirer>().Fire(b);
+        for (int i = 0; i < _tank.Power; i++)
+        {
+            GetComponent<TankFirer>().Fire(b, _tank.Power);
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Item")
+        {
+            switch (collision.gameObject.GetComponent<SpriteRenderer>().sprite.name)
+            {
+                case "powerup_tank":
+                    _tankMover.speed += 1;
+                    break;
+                case "powerup_grenade":
+                    _tank.Power += 1;
+                    break;
+                case "powerup_shovel":
+
+                    break;
+            }
+            Destroy(collision.gameObject);
+        }
     }
 }

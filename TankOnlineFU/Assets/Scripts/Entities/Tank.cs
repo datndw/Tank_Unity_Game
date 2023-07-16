@@ -13,6 +13,7 @@ namespace Entities
         public string Name { get; set; }
         public int Point { get; set; }
         public int Hp { get; set; }
+        public int Power { get; set; }
 
         public GUID Guid { get; set; }
         //public Vector3 Position { get; set; }

@@ -35,6 +35,7 @@ public class EnemyController : MonoBehaviour
             Hp = 10,
             Point = 0,
             Position = new Vector3(gameObject.gameObject.transform.position.x, gameObject.gameObject.transform.position.y, 0),
+            Power = 1,
             Guid = GUID.Generate()
         };
         gameObject.transform.position = _tank.Position;
@@ -94,7 +95,7 @@ public class EnemyController : MonoBehaviour
             //Tank = _tank,
             InitialPosition = _tank.Position
         };
-        GetComponent<TankFirer>().Fire(b);
+        GetComponent<TankFirer>().Fire(b, _tank.Power);
     }
 
     private void OnCollisionEnter2D(Collision2D other)

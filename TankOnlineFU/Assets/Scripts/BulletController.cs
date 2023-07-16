@@ -8,8 +8,11 @@ using UnityEngine;
 public class BulletController : MonoBehaviour
 {
     private AudioManager m_AudioManager;
-    public Animator animator;
+    //public Animator animator;
     public Bullet Bullet { get; set; }
+    public GameObject SpeedItem;
+    public GameObject SuperItem;
+    public GameObject GuardItem;
 
     public int MaxRange { get; set; }
 
@@ -84,9 +87,24 @@ public class BulletController : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Brick")
         {
+            int rand = UnityEngine.Random.Range(0, 100);
+            if(rand >=5 && rand <= 10)
+            {
+                Instantiate(SpeedItem, collision.transform.position, Quaternion.identity);
+            }
+            else if(rand >= 15 && rand <= 20)
+            {
+                Instantiate(SuperItem, collision.transform.position, Quaternion.identity);
+            }
+            else if (rand >= 25 && rand <= 30 && GameSettings.IsGuardActived == false)
+            {
+                Instantiate(GuardItem, collision.transform.position, Quaternion.identity);
+                GameSettings.IsGuardActived =  true;
+            }
             m_AudioManager.PlaySFX(m_AudioManager.bulletHitBrick);
             //animation
             // animator.SetTrigger("bulletHit");
+
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }

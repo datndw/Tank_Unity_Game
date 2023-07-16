@@ -8,5 +8,6 @@ public class GameSettings
 	public static bool isMuted = false;
 	public static int createdLevel = 0;
 	public static Map Map = new();
+	public static bool IsGuardActived = false;
 }
 

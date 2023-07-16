@@ -13,6 +13,7 @@ TagManager:
   - Water
   - Base
   - Builder
+  - Item
   layers:
   - Default
   - TransparentFX

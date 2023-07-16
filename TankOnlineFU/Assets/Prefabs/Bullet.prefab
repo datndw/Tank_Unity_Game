@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 346634900657866928}
   - component: {fileID: 5519937955399337043}
   - component: {fileID: -5267349810439902058}
-  - component: {fileID: 1939593601873084421}
   m_Layer: 8
   m_Name: Bullet
   m_TagString: bullet
@@ -98,6 +97,25 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: baadf9f5e60d9486991741345a72baab, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -131,6 +149,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -147,25 +171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3f250f5e4a894afcb9e437b3674fa85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 1939593601873084421}
---- !u!95 &1939593601873084421
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7740309687340280598}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 62dda82a71343c74ba2652065d789341, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  SpeedItem: {fileID: 4990900122955174760, guid: 423eed758628d4e178219992875a66fd, type: 3}
+  SuperItem: {fileID: 4990900122955174760, guid: 02bb9dcb5ae484024b25d66fd81cd2e1, type: 3}
+  GuardItem: {fileID: 4990900122955174760, guid: b5434e4e7f33f48fbba751131cbd329b, type: 3}

@@ -45,6 +45,7 @@ public class BuilderController : MonoBehaviour
             Hp = 10,
             Point = 0,
             Position = new Vector3(15, 15, 0),
+            Power = 0,
             Guid = GUID.Generate()
         };
         gameObject.transform.position = _tank.Position;

@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using System.Threading.Tasks;
 using Entities;
 using Enumerations;
 using UnityEngine;
@@ -25,14 +27,13 @@ namespace DefaultNamespace
         {
         }
 
-        public void Fire(Bullet b)
+        public void Fire(Bullet b, int power)
         {
-            // Debug.Log("FIre: "+Time.time);
+            speed = 12 + 2 * power;
             if (lastFire + delay > Time.time)
             {
                 return;
             }
-
             var bullet = Instantiate(bulletPrefab, b.InitialPosition, Quaternion.identity);
             var sr = bullet.GetComponent<SpriteRenderer>();
             var rigidBody2d = bullet.GetComponent<Rigidbody2D>();
@@ -64,8 +65,8 @@ namespace DefaultNamespace
                 default:
                     throw new ArgumentOutOfRangeException();
             }
-
             rigidBody2d.AddForce(force, ForceMode2D.Impulse);
+
             lastFire = Time.time;
         }
     }
