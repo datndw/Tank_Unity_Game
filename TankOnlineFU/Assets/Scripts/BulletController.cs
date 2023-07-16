@@ -8,13 +8,13 @@ using UnityEngine;
 public class BulletController : MonoBehaviour
 {
     private AudioManager m_AudioManager;
-
+    public Animator animator;
     public Bullet Bullet { get; set; }
 
     public int MaxRange { get; set; }
 
     private GameManager m_GameManager;
-    
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -70,6 +70,7 @@ public class BulletController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Metal")
         {
+            //animation
             m_AudioManager.PlaySFX(m_AudioManager.bulletHitMetal);
             Destroy(gameObject);
         }
@@ -84,6 +85,8 @@ public class BulletController : MonoBehaviour
         else if (collision.gameObject.tag == "Brick")
         {
             m_AudioManager.PlaySFX(m_AudioManager.bulletHitBrick);
+            //animation
+            animator.SetTrigger("bulletHit");
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }
@@ -95,14 +98,14 @@ public class BulletController : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Enemy")
         {
-            Destroy(collision.gameObject);
+            //animation
             Destroy(gameObject);
         }
         else if (collision.gameObject.tag == "Player")
         {
-            Destroy(collision.gameObject);
+            // Destroy(collision.gameObject);
             Destroy(gameObject);
-            m_GameManager.Gameover();
+            // m_GameManager.Gameover();
         }
         else if (collision.gameObject.tag == "bulletEnemy")
         {

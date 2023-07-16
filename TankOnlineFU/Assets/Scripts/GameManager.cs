@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameplayPanel m_GameplayPanel;
     [SerializeField] private PausePanel m_PausePanel;
     [SerializeField] private GameoverPanel m_GameoverPanel;
+    [SerializeField] private GamewonPanel m_GamewonPanel;
     [SerializeField] private ConstructionPanel m_ConstructionPanel;
     [SerializeField] private CreateLevelPanel m_CreateLevelPanel;
     [SerializeField] private ChooseLevelPanel m_ChooseLevelPanel;
@@ -57,6 +58,7 @@ public class GameManager : MonoBehaviour
         m_GameplayPanel.gameObject.SetActive(false);
         m_PausePanel.gameObject.SetActive(false);
         m_GameoverPanel.gameObject.SetActive(false);
+        m_GamewonPanel.gameObject.SetActive(false);
         m_ConstructionPanel.gameObject.SetActive(false);
         m_CreateLevelPanel.gameObject.SetActive(false);
         m_ChooseLevelPanel.gameObject.SetActive(false);
@@ -70,11 +72,12 @@ public class GameManager : MonoBehaviour
         m_GameplayPanel.gameObject.SetActive(m_GameState == GameState.GamePlay);
         m_PausePanel.gameObject.SetActive(m_GameState == GameState.Pause);
         m_GameoverPanel.gameObject.SetActive(m_GameState == GameState.GameOver);
+        m_GamewonPanel.gameObject.SetActive(m_GameState == GameState.GameWon);
         m_ConstructionPanel.gameObject.SetActive(m_GameState == GameState.Construction);
         m_CreateLevelPanel.gameObject.SetActive(m_GameState == GameState.CreateLevel);
         m_ChooseLevelPanel.gameObject.SetActive(m_GameState == GameState.ChooseLevel);
 
-        if (m_GameState == GameState.Pause || m_GameState == GameState.Home || m_GameState == GameState.Construction)
+        if (m_GameState == GameState.Pause || m_GameState == GameState.Home || m_GameState == GameState.Construction || m_GameState == GameState.GameWon)
         {
             Time.timeScale = 0;
         }
@@ -113,7 +116,7 @@ public class GameManager : MonoBehaviour
         MapLoader.LoadMap(CREATE_LEVEL);
         SetState(GameState.CreateLevel);
     }
-    
+
     public void Pause()
     {
         SetState(GameState.Pause);
@@ -132,6 +135,12 @@ public class GameManager : MonoBehaviour
     {
         m_AudioInstance.PlaySFX(m_AudioInstance.loseGame);
         SetState(GameState.GameOver);
+    }
+    public void Gamewon()
+    {
+        Debug.Log("win");
+        m_AudioInstance.PlaySFX(m_AudioInstance.loseGame);
+        SetState(GameState.GameWon);
     }
     public void NextLevel()
     {

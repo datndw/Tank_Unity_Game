@@ -2477,7 +2477,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 456658981}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb059231daa7543089ff36c7d613deee, type: 3}
+  m_Script: {fileID: 11500000, guid: 218ab4c33db546047a891b89bf86080d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &475620236
@@ -2882,6 +2882,7 @@ MonoBehaviour:
   m_GameplayPanel: {fileID: 419100537}
   m_PausePanel: {fileID: 280224518}
   m_GameoverPanel: {fileID: 1395563674}
+  m_GamewonPanel: {fileID: 456658983}
   m_ConstructionPanel: {fileID: 2039452647}
   m_CreateLevelPanel: {fileID: 86718380}
   m_ChooseLevelPanel: {fileID: 1322377248}

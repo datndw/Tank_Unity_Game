@@ -5,6 +5,7 @@
         GamePlay,
         Pause,
         GameOver,
+        GameWon,
         Home,
         Construction,
         CreateLevel,
