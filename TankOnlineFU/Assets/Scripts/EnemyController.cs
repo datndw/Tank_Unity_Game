@@ -20,6 +20,7 @@ public class EnemyController : MonoBehaviour
     private SpriteRenderer _renderer;
     public Transform target; // The player's tank transform
     public float moveSpeed = 3f;
+    public int health;
 
     private void Start()
     {
@@ -92,4 +93,15 @@ public class EnemyController : MonoBehaviour
         GetComponent<TankFirer>().Fire(b);
     }
 
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("bullet"))
+        {
+            health-=10;
+            if (health <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
 }

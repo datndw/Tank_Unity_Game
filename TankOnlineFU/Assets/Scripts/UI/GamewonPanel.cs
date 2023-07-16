@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CreateLevelPanel : MonoBehaviour
+public class GamewonPanel : MonoBehaviour
 {
     private GameManager m_GameManager;
     // Start is called before the first frame update
@@ -14,14 +14,6 @@ public class CreateLevelPanel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            MapSaver.Save();
-            m_GameManager.Home();
-        }
-        else if (Input.GetKeyDown(KeyCode.I))
-        {
-            m_GameManager.Home();
-        }
+
     }
 }
