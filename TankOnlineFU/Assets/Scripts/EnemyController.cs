@@ -11,7 +11,7 @@ using UnityEngine.AI;
 public class EnemyController : MonoBehaviour
 {
     private Tank _tank;
-
+    private GameManager m_GameManager;
     public Sprite tankUp;
     public Sprite tankDown;
     public Sprite tankLeft;
@@ -22,6 +22,10 @@ public class EnemyController : MonoBehaviour
     public float moveSpeed = 3f;
     public int health;
 
+    private void Awake()
+    {
+        m_GameManager = FindObjectOfType<GameManager>();
+    }
     private void Start()
     {
         _tank = new Tank
@@ -97,10 +101,15 @@ public class EnemyController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("bullet"))
         {
-            health-=10;
+            health -= 10;
             if (health <= 0)
             {
                 Destroy(gameObject);
+                var enemy=GameObject.FindGameObjectsWithTag("Enemy");
+                Debug.Log(enemy.Length);
+                if(enemy.Length<=1){
+                    m_GameManager.Gamewon();
+                }
             }
         }
     }
